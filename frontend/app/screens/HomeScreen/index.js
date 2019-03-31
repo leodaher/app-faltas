@@ -4,6 +4,15 @@ import strings from '../../assets/strings/';
 import styles from './styles.js';
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this._onPressSignUp = this._onPressSignUp.bind(this);
+  }
+
+  _onPressSignUp() {
+    this.props.navigation.navigate('SignUp');
+  }
+
   render() {
     return (
       <View style={ styles.container }>
@@ -11,10 +20,10 @@ export default class HomeScreen extends React.Component {
           <Text style={ styles.title }>{ strings.home.title }</Text>
         </View>
         <View style={ styles.bottomContainer }>
-          <TouchableHighlight style={ styles.signUpContainer }>
+          <TouchableHighlight style={ styles.signUpContainer } onPress={this._onPressSignUp}>
             <Text style={ styles.signUpText }>{ strings.home.buttons.cadastro }</Text>
           </TouchableHighlight>
-          <TouchableHighlight style={ styles.loginContainer }>
+          <TouchableHighlight style={ styles.loginContainer } >
             <Text style={styles.loginText}>{ strings.home.buttons.entrar }</Text>
           </TouchableHighlight>
         </View>

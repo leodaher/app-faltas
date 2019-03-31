@@ -5,6 +5,9 @@ const colors = {
     loginContainer: '#F5F8F5',
     title: 'white',
     signUpText: 'white'
+  },
+  signUp: {
+    background: '#F5F8F5'
   }
 }
 
