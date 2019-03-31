@@ -1,19 +1,21 @@
 import React from "react";
 import { View, Text, TouchableHighlight } from "react-native";
+import strings from '../../assets/strings/';
+import styles from './styles.js';
 
 export default class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <View style={{ flex: 7, alignItems: "center", justifyContent: "center" }}>
-          <Text>App de Faltas</Text>
+      <View style={ styles.container }>
+        <View style={ styles.topContainer }>
+          <Text style={ styles.title }>{ strings.home.title }</Text>
         </View>
-        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between" }}>
-          <TouchableHighlight style={{ flex:1, backgroundColor: '#11122E', justifyContent: "center", alignItems: "center"}}>
-            <Text style={{ color: 'white', fontSize: 20, fontFamily: "monospace"}}>Cadastrar</Text>
+        <View style={ styles.bottomContainer }>
+          <TouchableHighlight style={ styles.signUpContainer }>
+            <Text style={ styles.signUpText }>{ strings.home.buttons.cadastro }</Text>
           </TouchableHighlight>
-          <TouchableHighlight style={{ flex:1, backgroundColor: '#F5F8F5', justifyContent: "center", alignItems: "center"}}>
-            <Text style={{ fontSize: 20}}>Entrar</Text>
+          <TouchableHighlight style={ styles.loginContainer }>
+            <Text style={styles.loginText}>{ strings.home.buttons.entrar }</Text>
           </TouchableHighlight>
         </View>
       </View>
