@@ -28,11 +28,12 @@ frontend/project.xcworkspace
 
 # Android/IntelliJ
 #
-frontend/build/
-frontend/.idea
-frontend/.gradle
-frontend/local.properties
-frontend/*.iml
+frontend/android/build/
+frontend/android/.idea
+frontend/android/.gradle
+frontend/android/local.properties
+frontend/android/*.iml
+frontend/android/app/build/
 
 # node.js
 #
