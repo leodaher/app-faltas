@@ -4,16 +4,21 @@ const fontList = {
 
 const fonts = {
   home: {
-    title: font1,
+    title: fontList.font1,
     buttons: {
-      signUp: font1,
-      login: font1
+      signUp: fontList.font1,
+      login: fontList.font1
     }
   },
   signUp: {
-    emailField: font1,
-    passwordField: font1,
-    button: font1
+    emailField: fontList.font1,
+    passwordField: fontList.font1,
+    button: fontList.font1
+  },
+  login: {
+    emailField: fontList.font1,
+    passwordField: fontList.font1,
+    button: fontList.font1
   }
 }
 

@@ -20,6 +20,12 @@ const colors = {
     headerBackground: colorList.color2,
     underlineColorAndroid: colorList.color2,
     button: colorList.color5,
+  },
+  login: {
+    background: colorList.color1,
+    headerBackground: colorList.color2,
+    underlineColorAndroid: colorList.color2,
+    button: colorList.color5
   }
 }
 

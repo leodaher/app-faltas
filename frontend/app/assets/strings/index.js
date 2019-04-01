@@ -10,6 +10,11 @@ const strings = {
     emailPlaceholder: "E-mail",
     passwordPlaceholder: "Senha",
     button: "Cadastrar"
+  },
+  login: {
+    emailPlaceholder: "E-mail",
+    passwordPlaceholder: "Senha",
+    button: "Entrar"
   }
 }
 
