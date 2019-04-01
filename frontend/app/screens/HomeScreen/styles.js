@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
 import colors from '../../assets/colors/';
+import fonts from '../../assets/fonts';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,16 +32,16 @@ const styles = StyleSheet.create({
   signUpText: {
     color: colors.home.signUpText,
     fontSize: 20,
-    fontFamily: "Montserrat-Regular"
+    fontFamily: fonts.home.buttons.signUp
   },
   loginText: {
     fontSize: 20,
-    fontFamily: "Montserrat-Regular"
+    fontFamily: fonts.home.buttons.login
   },
   title: {
     fontSize: 28,
     color: colors.home.title,
-    fontFamily: "Montserrat-Regular"
+    fontFamily: fonts.home.title
   }
 });
 
