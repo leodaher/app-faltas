@@ -1,20 +1,45 @@
 import React from "react";
-import { View, Text, TextInput, TouchableHighlight, Dimensions } from "react-native";
-import styles from './styles.js'
+import { View, Text, TextInput, TouchableHighlight, Alert } from "react-native";
+import styles from './styles.js';
 import colors from '../../assets/colors';
+import strings from '../../assets/strings/'
+
 
 export default class SignUpScreen extends React.Component {
-  render() {
-    const rightMarginButton = (Dimensions.get('screen').width - 350)/2;
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    }
 
+    this.signUp = this.signUp.bind(this);
+  }
+
+  signUp() {
+    //TODO : implement sign up logic here
+  }
+
+  render() {
     return (
-      <View style={{flex:1, backgroundColor: colors.signUp.background, alignItems: "center" }}>
-        <TextInput style={{height:80, fontSize:20, width: 350}} placeholder="E-mail" underlineColorAndroid={colors.signUp.underlineColorAndroid}/>
-        <TextInput secureTextEntry={true} style={{height: 80, fontSize:20, width: 350, marginBottom: 40}} placeholder="Senha" underlineColorAndroid={colors.signUp.underlineColorAndroid}/>
-        <View style={{width: 350, flexDirection: 'row', justifyContent: 'flex-end'}}>
-          <TouchableHighlight style={{backgroundColor: colors.signUp.button, padding: 15}}>
-            <Text style={{fontSize: 18, color: 'white'}}>Cadastrar</Text>
-            </TouchableHighlight>
+      <View style={styles.container}>
+        <TextInput
+          style={styles.emailField}
+          placeholder={strings.signUp.emailPlaceholder}
+          underlineColorAndroid={colors.signUp.underlineColorAndroid}
+          onChangeText={(text) => this.setState({email: text})}/>
+        <TextInput
+          secureTextEntry={true}
+          style={styles.passwordField}
+          placeholder={strings.signUp.passwordPlaceholder}
+          underlineColorAndroid={colors.signUp.underlineColorAndroid}
+          onChangeText={(text) => this.setState({password: text})}/>
+        <View style={styles.buttonView}>
+          <TouchableHighlight
+            style={styles.buttonTouchable}
+            onPress={this.signUp}>
+            <Text style={styles.buttonText}>{strings.signUp.button}</Text>
+          </TouchableHighlight>
         </View>
       </View>
     )

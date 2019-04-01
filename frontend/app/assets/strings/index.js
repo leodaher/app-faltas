@@ -5,6 +5,11 @@ const strings = {
       cadastro: "Cadastrar",
       entrar: "Entrar"
     }
+  },
+  signUp: {
+    emailPlaceholder: "E-mail",
+    passwordPlaceholder: "Senha",
+    button: "Cadastrar"
   }
 }
 
