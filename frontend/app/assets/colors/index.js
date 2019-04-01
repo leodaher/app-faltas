@@ -7,7 +7,10 @@ const colors = {
     signUpText: 'white'
   },
   signUp: {
-    background: '#F5F8F5'
+    background: '#F5F8F5',
+    headerBackground: '#8A92A4',
+    underlineColorAndroid: '#8A92A4',
+    button: '#11122E',
   }
 }
 
